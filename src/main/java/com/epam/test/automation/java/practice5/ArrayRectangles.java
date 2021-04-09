@@ -31,13 +31,23 @@ public class ArrayRectangles {
     }
    
     public int numberMinPerimeter() {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+        double minPerimeter = rectangleArray[0].perimeter();
+        int index = 0;
+    	for (int i = 0; i<rectangleArray.length; i++) {
+    		if (rectangleArray[i].area() < minPerimeter) {
+    			index = i;
+    			minPerimeter = rectangleArray[i].perimeter();
+    		}
+    	}
+        return index;
     }
 
     public int numberSquares() {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+    	int amount = 0;
+    	for (Rectangle rectangle : rectangleArray) {
+			if (rectangle.isSquare()) amount++; 
+		}
+        return amount;
     }
 
 }
