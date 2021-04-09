@@ -1,49 +1,40 @@
 package com.epam.test.automation.java.practice5;
 
-/**
- * <summary>
- * Implement class according to description of task.
- * </summary>
- */
 public class ArrayRectangles {
-    //TODO: Delete line below and write your own solution;
-    //TODO: implement constructors according to description of task
-
-    /**
-     * <summary>
-     * Implement code according to description of task.
-     * </summary>
-     */
+    private Rectangle[] rectangleArray;
+	private int count;
+	
+	public ArrayRectangles(int n) {
+		rectangleArray = new Rectangle[n];
+		count = 0;
+	}
+	public ArrayRectangles(Rectangle ... rectangles) {
+		rectangleArray = rectangles;
+	}
+   
     public boolean addRectangle(Rectangle rectangle) {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+        rectangleArray[count] = rectangle;
+		count++;
+		return true; 
     }
 
-    /**
-     * <summary>
-     * Implement code according to description of task.
-     * </summary>
-     */
     public int numberMaxArea() {
-        //TODO: Delete line below and write your own solution;
-        throw new UnsupportedOperationException();
+        double maxArea = 0;
+        int index = 0;
+    	for (int i = 0; i<rectangleArray.length; i++) {
+    		if (rectangleArray[i].area() > maxArea) {
+    			index = i;
+    			maxArea = rectangleArray[i].area();
+    		}
+    	}
+        return index;
     }
-
-    /**
-     * <summary>
-     * Implement code according to description of task.
-     * </summary>
-     */
+   
     public int numberMinPerimeter() {
         //TODO: Delete line below and write your own solution;
         throw new UnsupportedOperationException();
     }
 
-    /**
-     * <summary>
-     * Implement code according to description of task.
-     * </summary>
-     */
     public int numberSquares() {
         //TODO: Delete line below and write your own solution;
         throw new UnsupportedOperationException();
