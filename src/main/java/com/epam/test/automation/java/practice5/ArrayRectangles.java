@@ -13,9 +13,12 @@ public class ArrayRectangles {
 	}
    
     public boolean addRectangle(Rectangle rectangle) {
-        rectangleArray[count] = rectangle;
-		count++;
-		return true; 
+        if (count<rectangleArray.length) {
+			rectangleArray[count] = rectangle;
+			count++;
+			return true;
+		}
+		return false;
     }
 
     public int numberMaxArea() {
