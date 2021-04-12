@@ -38,8 +38,7 @@ public class Rectangle {
     }
 
     public boolean isSquare() {
-        if (sideA == sideB) return true;
-		return false;
+		return sideA == sideB;
     }
 
     public void replaceSides() {
