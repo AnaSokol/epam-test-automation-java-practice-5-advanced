@@ -13,7 +13,7 @@ public class ArrayRectangles {
 	}
    
     public boolean addRectangle(Rectangle rectangle) {
-        if (count<rectangleArray.length) {
+        if (rectangleArray[count]== null && count<rectangleArray.length) {
 			rectangleArray[count] = rectangle;
 			count++;
 			return true;
